@@ -82,7 +82,7 @@ app.post('/callback', function(req, res) {
       // sendMessage.send(req, [messageTemplate.textMessage(message)]);
 
       var url = ""
-      var randomNum = Math.random() * 3;
+      var randomNum = Math.floor(Math.random() * 3);
       if (message_text == "犬") {
         var dogList = [
           "https://i.imgur.com/FZCjbfn.jpg",
