@@ -84,7 +84,7 @@ app.post('/callback', function(req, res) {
       var url = ""
       var randomNum = Math.random() * 3;
       if (message_text == "犬") {
-        dogList = [
+        var dogList = [
           "https://i.imgur.com/FZCjbfn.jpg",
           "https://i.imgur.com/ICzPSqy.jpg",
           "https://i.imgur.com/OvyW4d1.jpg"]
