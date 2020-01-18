@@ -106,10 +106,10 @@ app.post('/callback', function(req, res) {
       //sendMessage.send(req, [messageTemplate.textMessage(message), messageTemplate.quickMessage("質問に答えてね！")]);
 
       // flexメッセージを使う
-      var title = "質問";
+      var title = "この子の名前は？";
       var imageUrl = "https://sportiva.shueisha.co.jp/clm/othersports/other/2018/images/tochinoshin20180130.jpg";
-      var choices = ["選択肢1", "選択肢2", "選択肢3", "選択肢4"];
-      var answers = ["回答1", "回答2", "回答3", "回答4"];
+      var choices = ["鉄の芯", "龍之進", "筒の芯", "栃ノ心"];
+      var answers = ["鉄の芯", "龍之進", "筒の芯", "栃ノ心"];
       sendMessage.send(req, [messageTemplate.customQuestionMessage(title, imageUrl, choices, answers)]);
 
       // データベースを使って返信する場合、こちらのコメントを解除してください
