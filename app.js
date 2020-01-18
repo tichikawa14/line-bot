@@ -87,7 +87,8 @@ app.post('/callback', function(req, res) {
         var dogList = [
           "https://i.imgur.com/FZCjbfn.jpg",
           "https://i.imgur.com/ICzPSqy.jpg",
-          "https://i.imgur.com/OvyW4d1.jpg"]
+          "https://i.imgur.com/OvyW4d1.jpg"];
+        console.log(dogList[randomNum]);
         url = [dogList[randomNum]];
       }
 
