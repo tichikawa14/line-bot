@@ -107,7 +107,7 @@ app.post('/callback', function(req, res) {
 
       // flexメッセージを使う
       var title = "質問";
-      var imageUrl = "https://i.imgur.com/I5AZqHV.png";
+      var imageUrl = "https://sportiva.shueisha.co.jp/clm/othersports/other/2018/images/tochinoshin20180130.jpg";
       var choices = ["選択肢1", "選択肢2", "選択肢3", "選択肢4"];
       var answers = ["回答1", "回答2", "回答3", "回答4"];
       sendMessage.send(req, [messageTemplate.customQuestionMessage(title, imageUrl, choices, answers)]);
