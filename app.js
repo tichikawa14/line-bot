@@ -75,6 +75,11 @@ app.post('/callback', function(req, res) {
     // 返事を生成する関数
     function(req, displayName, message_id, message_type, message_text) {
 
+      if (message_text == "栃ノ心") {
+        sendMessage.send(req, [messageTemplate.textMessage("正解！！")]);
+        return;
+      }
+
       // var message = "";
       // message = "hello, " + displayName + "さん"; // helloと返事する
       // message = message_text; // おうむ返しする
@@ -92,9 +97,9 @@ app.post('/callback', function(req, res) {
       //   url = [dogList[randomNum]];
       // }
       //
-      // if (message_text == "猫") {
-      //   url = "https://i.imgur.com/FZCjbfn.jpg"
-      // }
+      if (message_text == "猫") {
+        url = "https://i.imgur.com/FZCjbfn.jpg"
+      }
       // if (message_text == "猿") {
       //   url = "https://i.imgur.com/FZCjbfn.jpg"
       // }
