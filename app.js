@@ -82,7 +82,18 @@ app.post('/callback', function(req, res) {
       // sendMessage.send(req, [messageTemplate.textMessage(message)]);
 
       var url = ""
+      var randomNum = Math.random() * 3;
       if (message_text == "犬") {
+        url = [
+          "https://i.imgur.com/FZCjbfn.jpg",
+          "https://i.imgur.com/ICzPSqy.jpg",
+          "https://i.imgur.com/OvyW4d1.jpg"
+      }
+
+      if (message_text == "猫") {
+        url = "https://i.imgur.com/FZCjbfn.jpg"
+      }
+      if (message_text == "猿") {
         url = "https://i.imgur.com/FZCjbfn.jpg"
       }
       sendMessage.send(req, [
