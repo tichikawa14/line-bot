@@ -80,11 +80,11 @@ app.post('/callback', function(req, res) {
       // message = message_text; // おうむ返しする
       // message = message_text + "[" + message_text.length + "文字]";
       sendMessage.send(req, [messageTemplate.textMessage(message)]);
-      
-      // var url = "https://i.imgur.com/I5AZqHV.png"
-      // sendMessage.send(req, [
-      //   messageTemplate.imageMessage(url)
-      // ]);
+
+      var url = "https://i.imgur.com/I5AZqHV.png"
+      sendMessage.send(req, [
+        messageTemplate.imageMessage(url)
+      ]);
 
       // データベースを使う場合、下記のコードはコメントアウトしてください
       //sendMessage.send(req, [messageTemplate.textMessage(message), messageTemplate.quickMessage("質問に答えてね！")]);
