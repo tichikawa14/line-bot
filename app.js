@@ -79,7 +79,7 @@ app.post('/callback', function(req, res) {
       message = "hello, " + displayName + "さん"; // helloと返事する
       // message = message_text; // おうむ返しする
       // message = message_text + "[" + message_text.length + "文字]";
-      sendMessage.send(req, [messageTemplate.textMessage(message_text)]);
+      sendMessage.send(req, [messageTemplate.textMessage(message)]);
       
       // var url = "https://i.imgur.com/I5AZqHV.png"
       // sendMessage.send(req, [
