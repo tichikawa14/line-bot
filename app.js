@@ -75,42 +75,42 @@ app.post('/callback', function(req, res) {
     // 返事を生成する関数
     function(req, displayName, message_id, message_type, message_text) {
 
-      var message = "";
-      message = "hello, " + displayName + "さん"; // helloと返事する
+      // var message = "";
+      // message = "hello, " + displayName + "さん"; // helloと返事する
       // message = message_text; // おうむ返しする
       // message = message_text + "[" + message_text.length + "文字]";
       // sendMessage.send(req, [messageTemplate.textMessage(message)]);
 
-      var url = ""
-      var randomNum = Math.floor(Math.random() * 3);
-      if (message_text == "犬") {
-        var dogList = [
-          "https://i.imgur.com/FZCjbfn.jpg",
-          "https://i.imgur.com/ICzPSqy.jpg",
-          "https://i.imgur.com/OvyW4d1.jpg"];
-        console.log(dogList[randomNum]);
-        url = [dogList[randomNum]];
-      }
-
-      if (message_text == "猫") {
-        url = "https://i.imgur.com/FZCjbfn.jpg"
-      }
-      if (message_text == "猿") {
-        url = "https://i.imgur.com/FZCjbfn.jpg"
-      }
-      sendMessage.send(req, [
-        messageTemplate.imageMessage(url)
-      ]);
+      // var url = ""
+      // var randomNum = Math.floor(Math.random() * 3);
+      // if (message_text == "犬") {
+      //   var dogList = [
+      //     "https://i.imgur.com/FZCjbfn.jpg",
+      //     "https://i.imgur.com/ICzPSqy.jpg",
+      //     "https://i.imgur.com/OvyW4d1.jpg"];
+      //   console.log(dogList[randomNum]);
+      //   url = [dogList[randomNum]];
+      // }
+      //
+      // if (message_text == "猫") {
+      //   url = "https://i.imgur.com/FZCjbfn.jpg"
+      // }
+      // if (message_text == "猿") {
+      //   url = "https://i.imgur.com/FZCjbfn.jpg"
+      // }
+      // sendMessage.send(req, [
+      //   messageTemplate.imageMessage(url)
+      // ]);
 
       // データベースを使う場合、下記のコードはコメントアウトしてください
       //sendMessage.send(req, [messageTemplate.textMessage(message), messageTemplate.quickMessage("質問に答えてね！")]);
 
-      // // flexメッセージを使う
-      // var title = "質問";
-      // var imageUrl = "https://i.imgur.com/I5AZqHV.png";
-      // var choices = ["選択肢1", "選択肢2", "選択肢3", "選択肢4"];
-      // var answers = ["回答1", "回答2", "回答3", "回答4"];
-      // sendMessage.send(req, [messageTemplate.customQuestionMessage(title, imageUrl, choices, answers)]);
+      // flexメッセージを使う
+      var title = "質問";
+      var imageUrl = "https://i.imgur.com/I5AZqHV.png";
+      var choices = ["選択肢1", "選択肢2", "選択肢3", "選択肢4"];
+      var answers = ["回答1", "回答2", "回答3", "回答4"];
+      sendMessage.send(req, [messageTemplate.customQuestionMessage(title, imageUrl, choices, answers)]);
 
       // データベースを使って返信する場合、こちらのコメントを解除してください
       //databaseSample(req, message_text);
