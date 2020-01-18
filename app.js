@@ -81,7 +81,10 @@ app.post('/callback', function(req, res) {
       // message = message_text + "[" + message_text.length + "文字]";
       // sendMessage.send(req, [messageTemplate.textMessage(message)]);
 
-      var url = "https://i.imgur.com/I5AZqHV.png"
+      var url = ""
+      if (message_text == "犬") {
+        url = "https://i.imgur.com/FZCjbfn.jpg"
+      }
       sendMessage.send(req, [
         messageTemplate.imageMessage(url)
       ]);
